@@ -1,0 +1,16 @@
+# virtual environment
+.venv/
+venv/
+
+# raw data (downloaded by data/download_data.py)
+data/raw/
+
+# python / jupyter junk
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
