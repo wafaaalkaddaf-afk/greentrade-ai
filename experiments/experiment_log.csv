@@ -1,0 +1,7 @@
+run_id,timestamp,author,model,split,seed,MAE_kWh,RMSE,R2
+B001,2026-11-27T01:47:47,Wafaa,Seasonal naive (tomorrow = today),val,42,15.4552,29.0388,0.1072
+B002,2026-11-27T01:47:47,Wafaa,Last value,val,42,35.0723,46.2315,-1.2631
+B003,2026-11-27T01:47:47,Wafaa,Ridge regression,val,42,13.2581,19.191,0.61
+B004,2026-11-27T01:48:30,Wafaa,Seasonal naive (tomorrow = today),val,42,15.4552,29.0388,0.1072
+B005,2026-11-27T01:48:30,Wafaa,Last value,val,42,35.0723,46.2315,-1.2631
+B006,2026-11-27T01:48:30,Wafaa,Ridge regression,val,42,13.2581,19.191,0.61
