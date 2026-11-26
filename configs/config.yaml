@@ -1,0 +1,20 @@
+# Experiment configuration (single source of truth for the team)
+seed: 42
+
+data:
+  raw_path: data/raw/Steel_industry_data.csv
+  target: Usage_kWh
+  train_frac: 0.70
+  val_frac: 0.15      # test = remaining 0.15
+
+window:
+  input_len: 96       # 24 h at 15-minute resolution
+  output_len: 96      # next 24 h
+  stride_train: 1
+  stride_eval: 96     # non-overlapping windows for val/test
+
+metric: MAE           # primary metric, reported in kWh
+
+baselines:
+  ridge_alpha: 10.0
+  ridge_train_subsample: 4   # use every 4th training window (memory/speed)
