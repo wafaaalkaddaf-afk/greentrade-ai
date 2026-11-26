@@ -120,7 +120,7 @@ RMSE. RMSE is reported to expose large peak errors.
 - 35,040 rows, 15-minute readings (one full year), one small steel plant (DAEWOO Steel, South Korea)
 - Licence: CC BY 4.0
 - Citation: V E, S., Shin, C., & Cho, Y. (2021). *Steel Industry Energy Consumption* [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C52G8C
-
+- Dataset page: https://archive.ics.uci.edu/dataset/851/steel+industry+energy+consumption
 Main columns used:
 
 | Column | Meaning |
