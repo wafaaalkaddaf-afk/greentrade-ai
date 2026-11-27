@@ -1,0 +1,4 @@
+run_id,model,split,seed,evaluation_stride,MAE_kWh,RMSE_kWh,R2
+B001,Seasonal Naive (tomorrow = today),validation,42,96,15.4552,29.0388,0.1072
+B002,Last Value,validation,42,96,35.0723,46.2315,-1.2631
+B003,Ridge Regression,validation,42,96,13.2578,19.1908,0.6101

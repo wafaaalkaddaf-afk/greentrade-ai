@@ -1,0 +1,4 @@
+run_id,timestamp_utc,author,experiment_type,model,split,seed,input_steps,forecast_steps,train_stride,evaluation_stride,feature_count,scaler,scaler_fit,loss,MAE_kWh,RMSE_kWh,R2,status,notes
+B001,,Member 4,baseline,Seasonal Naive (tomorrow = today),validation,42,96,96,1,96,11,StandardScaler,training_only,N/A,15.4552,29.0388,0.1072,historical_result_recovered,Recovered historical baseline result; 53 validation windows
+B002,,Member 4,baseline,Last Value,validation,42,96,96,1,96,11,StandardScaler,training_only,N/A,35.0723,46.2315,-1.2631,historical_result_recovered,Recovered historical baseline result; 53 validation windows
+B003,,Member 4,baseline,Ridge Regression,validation,42,96,96,1,96,11,StandardScaler,training_only,N/A,13.2578,19.1908,0.6101,historical_result_recovered,Recovered historical baseline result; 53 validation windows
