@@ -1,4 +1,4 @@
-# Member 4 - Experimentation Report
+#  Experimentation Report
 
 ## 1. Role and Responsibilities
 Member 4 is responsible for experiment tracking, reproducibility,
