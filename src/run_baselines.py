@@ -14,12 +14,8 @@ from src.evaluate import all_metrics
 from src.models import LastValue, RidgeBaseline, SeasonalNaive
 
 LOG = Path("experiments/experiment_log.csv")
-FIELDS = [
-    "run_id", "timestamp_utc", "author", "experiment_type", "model", "split",
-    "seed", "input_steps", "forecast_steps", "train_stride",
-    "evaluation_stride", "feature_count", "scaler", "scaler_fit", "loss",
-    "MAE_kWh", "RMSE_kWh", "R2", "status", "notes",
-]
+FIELDS = ["run_id", "timestamp", "author", "model", "split", "seed",
+          "MAE_kWh", "RMSE", "R2"]
 
 
 def main():
@@ -51,28 +47,11 @@ def main():
             m.fit(Xtr, ytr)
             r = all_metrics(yva, m.predict(Xva), d["target_mean"], d["target_std"])
             print(f"{m.name:38s} {r['MAE']:8.3f} {r['RMSE']:8.3f} {r['R2']:7.3f}")
-            w.writerow({
-                "run_id": f"B{n_prev + i:03d}",
-                "timestamp_utc": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
-                "author": a.author,
-                "experiment_type": "baseline",
-                "model": m.name,
-                "split": "validation",
-                "seed": cfg["seed"],
-                "input_steps": cfg["window"]["input_len"],
-                "forecast_steps": cfg["window"]["output_len"],
-                "train_stride": cfg["window"]["stride_train"],
-                "evaluation_stride": cfg["window"]["stride_eval"],
-                "feature_count": len(d["feature_names"]),
-                "scaler": "StandardScaler",
-                "scaler_fit": "training_only",
-                "loss": "N/A",
-                "MAE_kWh": round(r["MAE"], 4),
-                "RMSE_kWh": round(r["RMSE"], 4),
-                "R2": round(r["R2"], 4),
-                "status": "completed",
-                "notes": "Baseline evaluated on validation only; test set reserved.",
-            })
+            w.writerow({"run_id": f"B{n_prev + i:03d}",
+                        "timestamp": dt.datetime.now().isoformat(timespec="seconds"),
+                        "author": a.author, "model": m.name, "split": "val",
+                        "seed": cfg["seed"], "MAE_kWh": round(r["MAE"], 4),
+                        "RMSE": round(r["RMSE"], 4), "R2": round(r["R2"], 4)})
     print(f"\nLogged to {LOG}")
 
 
