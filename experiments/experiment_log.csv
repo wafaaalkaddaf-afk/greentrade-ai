@@ -1,0 +1,4 @@
+﻿run_id,timestamp,author,model,split,seed,MAE_kWh,RMSE,R2
+B001,2026-11-27T08:20:35,Member 4,Seasonal naive (tomorrow = today),val,42,15.4552,29.0388,0.1072
+B002,2026-11-27T08:20:35,Member 4,Last value,val,42,35.0723,46.2315,-1.2631
+B003,2026-11-27T08:20:36,Member 4,Ridge regression,val,42,13.2578,19.1908,0.6101
