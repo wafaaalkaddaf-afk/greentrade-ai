@@ -174,17 +174,18 @@ greentrade-ai/
 │   └── config.yaml        all experiment settings (seed, split, window sizes)
 ├── data/
 │   └── download_data.py   downloads the dataset (no raw data in git)
+├── docs/                  model design and metrics notes
 ├── notebooks/             01_eda.ipynb, 02_results.ipynb
 ├── src/
 │   ├── data.py            loading, cleaning, splitting, scaling, windowing
 │   ├── models.py          baselines and neural architectures
-│   ├── train.py           training loop, callbacks, logging   (planned)
+│   ├── train.py           training loop, callbacks, logging
 │   ├── evaluate.py        metrics in kWh, plots, error analysis
-│   ├── predict.py         inference on raw input             (planned)
+│   ├── predict.py         inference on raw input
 │   └── run_baselines.py   evaluates the baselines and logs them
 ├── experiments/           experiment log (CSV) and saved curves
 ├── models/                final saved model and preprocessing objects
-├── app/                   demo application                   (planned)
+├── app/                   demo application
 └── report/                report PDF, slides, figures
 ```
 
