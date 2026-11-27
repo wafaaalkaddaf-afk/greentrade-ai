@@ -6,6 +6,7 @@ Framework: TensorFlow/Keras. Track: sequence forecasting (SimpleRNN, LSTM, GRU).
 > **Status:** Week 9-10 (problem framing, EDA, baselines). See
 > [Project status](#11-project-status) for what is done and what is next.
 
+
 **Contents:**
 [1. Overview](#1-overview-in-plain-words) ·
 [2. Problem](#2-the-problem) ·
