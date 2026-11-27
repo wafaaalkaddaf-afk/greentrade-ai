@@ -246,10 +246,10 @@ Final test results (mean ± std over 3 seeds, to be filled when the neural model
 | Member | GitHub | Work package | Main files | Experiments run |
 |---|---|---|---|---|
 | Wafaa | wafaaalkaddaf-afk | Tech Lead, EDA, baselines | README, configs, notebooks/01_eda.ipynb, src/data.py, src/models.py (baselines), src/evaluate.py (metrics) | B001-B003 |
-| TBD | TBD | Data Engineer | src/data.py | imbalance/augmentation ablations |
-| TBD | TBD | Model Architect | src/models.py (Models B, C) | architecture and regularization ablations |
-| TBD | TBD | Experimentation Engineer | src/train.py, experiments/ | learning-rate, batch-size, optimizer studies |
-| TBD | TBD | Evaluation and Deployment | src/evaluate.py, src/predict.py, app/ | evaluation of all models |
+| Mariam | Maryam7075m | Data Engineer | src/data.py | imbalance/augmentation ablations |
+| Donia | dodoali202005-netizen | Model Architect | src/models.py (Models B, C) | architecture and regularization ablations |
+| Menna Allah Ahmed| mn26-s | Experimentation Engineer | src/train.py, experiments/ | learning-rate, batch-size, optimizer studies |
+| RodinaHasaan |  | Evaluation and Deployment | src/evaluate.py, src/predict.py, app/ | evaluation of all models |
 
 ## 13. Limitations and ethics
 
