@@ -62,6 +62,7 @@ tomorrow's. This causes three connected problems.
 | Environment | Grid electricity and burned fuel emit CO2 | The plant cannot link its energy plans to their carbon effect |
 | Export and CBAM | The EU Carbon Border Adjustment Mechanism has been in its definitive phase since 1 January 2026. When verified emissions data are missing, default values with a mark-up are applied | Higher cost per tonne, and no early estimate to price a contract |
 
+What a wrong forecast costs: if the forecast is too low, the plant is surprised by demand peaks and pays a higher bill; if it is too high, production or saving plans are made for consumption that never happens. For this reason the forecast is reported with its error in kWh (MAE), so managers can see how far to trust it. The cost effects are potential, not measured results.
 ## 3. The solution
 
 The plant moves from **reacting** (waiting for the bill or a carbon charge) to
@@ -259,10 +260,7 @@ Final test results (mean ± std over 3 seeds, to be filled when the neural model
 
 ## 14. AI tools statement
 
-An AI assistant (Claude) was used to help draft the project code (data pipeline,
-baselines, metrics), the README and the EDA notebook. The Tech Lead ran all code,
-reviewed the results and is responsible for the content. *(Edit this paragraph so
-it matches exactly what you and your team did.)*
+An AI assistant (Claude) was used to help draft the project code (data pipeline, baselines, metrics), the README and the EDA notebook. The Tech Lead ran all code on the real dataset, checked the numbers (for example the 11 input features and the baseline results), wrote the EDA conclusions from the notebook outputs and is responsible for the content.
 
 ## 15. References
 
