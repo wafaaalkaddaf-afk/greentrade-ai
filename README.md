@@ -222,6 +222,22 @@ Values come from `experiments/experiment_log.csv`:
 
 Ridge regression is the strongest baseline so far; the neural models (next stage) must beat its MAE of 13.258 kWh.
 
+### Evaluation protocol
+
+- Metrics are calculated after inverse-transforming predictions and targets back to kWh.
+- MAE is the primary model-selection metric; RMSE and R2 are reported alongside it.
+- Baselines are fitted only on training windows and evaluated only on validation windows.
+- The test split is not used for model selection or baseline tuning.
+- Validation and test windows use the shared 96-step evaluation stride.
+- The test split is evaluated once after the model is selected on validation MAE.
+- Run baseline evaluation with:
+
+```bash
+python -m src.run_baselines --author "YOUR NAME"
+```
+
+This writes the baseline rows to `experiments/experiment_log.csv`.
+
 Final test results (mean ± std over 3 seeds, to be filled when the neural models are trained):
 
 | Model | Test MAE (kWh) | Test RMSE | Test R2 |
@@ -241,7 +257,8 @@ Final test results (mean ± std over 3 seeds, to be filled when the neural model
 | Baselines | Tech Lead | Done |
 | Models A, B, C with hand parameter counts | Model Architect | Planned |
 | Tuning and ablations | Experimentation Engineer | Planned |
-| Evaluation, error analysis, inference and demo | Evaluation Engineer | Planned |
+| Evaluation metrics and validation baseline protocol | Evaluation Engineer | Done |
+| Error analysis, inference and demo | Evaluation Engineer | Planned |
 
 ## 12. Team contributions
 
